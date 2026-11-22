@@ -1,0 +1,52 @@
+12:42  up 13 days, 23:21, 2 users, load averages: 218.25 303.92 286.33
+== round 1, 1000 rules
+SessionStart                   p50  229 ms   p95 1657 ms
+PostToolUse Write              p50  109 ms   p95  191 ms
+PreToolUse Bash (ls)           p50  176 ms   p95  317 ms
+PreToolUse Bash (git push)     p50  276 ms   p95  689 ms
+PostToolUse Bash (git commit)  p50  302 ms   p95  949 ms
+Stop                           p50  436 ms   p95  840 ms
+PreToolUse Bash (gh pr create) p50  578 ms   p95 2318 ms
+== round 1, 12 rules
+SessionStart                   p50  259 ms   p95  434 ms
+PostToolUse Write              p50  123 ms   p95  588 ms
+PreToolUse Bash (ls)           p50   81 ms   p95  316 ms
+PreToolUse Bash (git push)     p50  408 ms   p95  911 ms
+PostToolUse Bash (git commit)  p50  303 ms   p95  662 ms
+Stop                           p50  485 ms   p95 1102 ms
+PreToolUse Bash (gh pr create) p50  218 ms   p95  295 ms
+== round 1, 150 rules
+SessionStart                   p50  201 ms   p95  262 ms
+PostToolUse Write              p50   96 ms   p95  136 ms
+PreToolUse Bash (ls)           p50   98 ms   p95  188 ms
+PreToolUse Bash (git push)     p50  233 ms   p95  569 ms
+PostToolUse Bash (git commit)  p50  197 ms   p95  342 ms
+Stop                           p50  528 ms   p95  950 ms
+PreToolUse Bash (gh pr create) p50  594 ms   p95  783 ms
+== round 2, 1000 rules
+SessionStart                   p50  676 ms   p95 1463 ms
+PostToolUse Write              p50  560 ms   p95  912 ms
+PreToolUse Bash (ls)           p50  224 ms   p95  346 ms
+PreToolUse Bash (git push)     p50  778 ms   p95 1074 ms
+PostToolUse Bash (git commit)  p50  707 ms   p95 1017 ms
+Stop                           p50  659 ms   p95 1022 ms
+PreToolUse Bash (gh pr create) p50  333 ms   p95  633 ms
+== round 2, 12 rules
+SessionStart                   p50  183 ms   p95  213 ms
+PostToolUse Write              p50   91 ms   p95  103 ms
+PreToolUse Bash (ls)           p50   78 ms   p95   94 ms
+PreToolUse Bash (git push)     p50  215 ms   p95  244 ms
+PostToolUse Bash (git commit)  p50  172 ms   p95  209 ms
+Stop                           p50  292 ms   p95  404 ms
+PreToolUse Bash (gh pr create) p50  210 ms   p95  292 ms
+== round 2, 150 rules
+SessionStart                   p50  210 ms   p95  342 ms
+PostToolUse Write              p50  310 ms   p95  602 ms
+PreToolUse Bash (ls)           p50  108 ms   p95  260 ms
+PreToolUse Bash (git push)     p50  322 ms   p95  429 ms
+PostToolUse Bash (git commit)  p50  372 ms   p95  607 ms
+Stop                           p50  364 ms   p95  850 ms
+PreToolUse Bash (gh pr create) p50  512 ms   p95 1874 ms
+12:52  up 13 days, 23:32, 2 users, load averages: 885.95 236.09 948.38
+
+[exited with code 0]

@@ -1,0 +1,91 @@
+#!/usr/bin/env node
+import { readFileSync, writeFileSync } from 'node:fs'
+
+const stateFile = process.env.FAKE_GH_STATE
+const state = load()
+const [group, action, ...rest] = process.argv.slice(2)
+state.calls.push(process.argv.slice(2))
+
+function load() {
+  try {
+    return JSON.parse(readFileSync(stateFile, 'utf8'))
+  } catch {
+    return { calls: [], prs: [] }
+  }
+}
+
+function save() {
+  writeFileSync(stateFile, JSON.stringify(state, null, 2))
+}
+
+function option(names) {
+  const index = rest.findIndex((arg) => names.includes(arg))
+  if (index >= 0) return rest[index + 1]
+  const inline = rest.find((arg) => names.some((name) => arg.startsWith(`${name}=`)))
+  return inline?.slice(inline.indexOf('=') + 1)
+}
+
+function body() {
+  const file = option(['--body-file', '-F'])
+  if (file) return readFileSync(file === '-' ? 0 : file, 'utf8')
+  return option(['--body', '-b'])
+}
+
+function findPr() {
+  const number = Number(rest.find((arg) => /^#?\d+$/.test(arg))?.replace('#', ''))
+  return number ? state.prs.find((pr) => pr.number === number) : state.prs.find((pr) => pr.state === 'OPEN')
+}
+
+function list() {
+  const open = state.prs.filter((pr) => pr.state === 'OPEN')
+  if (rest.includes('--json')) console.log(JSON.stringify(open))
+  else for (const pr of open) console.log(`${pr.number}\t${pr.title}\tfeature\tOPEN`)
+  return 0
+}
+
+function create() {
+  const number = 100 + state.prs.length
+  const pr = { number, title: option(['--title', '-t']) ?? '', body: body() ?? '', state: 'OPEN', comments: [] }
+  state.prs.push(pr)
+  console.log(`https://github.com/example/repo/pull/${number}`)
+  return 0
+}
+
+function act(pr) {
+  if (action === 'view') {
+    console.log(JSON.stringify(pr))
+    return 0
+  }
+  if (action === 'edit') {
+    pr.title = option(['--title', '-t']) ?? pr.title
+    pr.body = body() ?? pr.body
+    return 0
+  }
+  if (action === 'comment') {
+    pr.comments = [...(pr.comments ?? []), body() ?? '']
+    console.log(`https://github.com/example/repo/pull/${pr.number}#issuecomment-1`)
+    return 0
+  }
+  if (action === 'close') {
+    pr.state = 'CLOSED'
+    pr.closeComment = option(['--comment', '-c']) ?? null
+    console.log(`Closed pull request #${pr.number}`)
+    return 0
+  }
+  return 0
+}
+
+function main() {
+  if (group !== 'pr') return 0
+  if (action === 'list') return list()
+  if (action === 'create') return create()
+  const pr = findPr()
+  if (!pr) {
+    console.error('no pull requests found for branch')
+    return 1
+  }
+  return act(pr)
+}
+
+process.exitCode = main()
+save()

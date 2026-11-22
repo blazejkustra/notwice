@@ -1,0 +1,67 @@
+{
+ "rules": 14,
+ "repos": {
+  "zsh-autosuggestions": {
+   "commits": 442,
+   "authors": 61,
+   "addedLines": 15093,
+   "fires": 0,
+   "byRule": {}
+  },
+  "speedrun": {
+   "commits": 98,
+   "authors": 1,
+   "addedLines": 127548,
+   "fires": 42,
+   "byRule": {
+    "no-em-dash": 42
+   }
+  },
+  ".oh-my-zsh": {
+   "commits": 8,
+   "authors": 5,
+   "addedLines": 127000,
+   "fires": 33,
+   "byRule": {
+    "no-private-key": 1,
+    "no-em-dash": 29,
+    "no-negation-correction": 3
+   }
+  },
+  "783232b622f8182e": {
+   "commits": 1,
+   "authors": 1,
+   "addedLines": 137245,
+   "fires": 2560,
+   "byRule": {
+    "no-private-key": 1,
+    "no-async-iife": 5,
+    "no-em-dash": 2552,
+    "no-negation-correction": 1,
+    "no-claude-attribution": 1
+   }
+  },
+  "2074e5536d711b8d": {
+   "commits": 1,
+   "authors": 1,
+   "addedLines": 13476,
+   "fires": 233,
+   "byRule": {
+    "no-em-dash": 233
+   }
+  },
+  "team-monorepo": {
+   "commits": 920,
+   "authors": 42,
+   "addedLines": 465530,
+   "fires": 13830,
+   "byRule": {
+    "no-claude-attribution": 315,
+    "no-em-dash": 13485,
+    "no-async-iife": 27,
+    "no-negation-correction": 1,
+    "no-narrating-comments": 2
+   }
+  }
+ }
+}

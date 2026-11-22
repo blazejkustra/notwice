@@ -1,0 +1,8 @@
+{
+  "name": "notwice",
+  "version": "0.1.0",
+  "description": "One set of rules, learned from your corrections, enforced the same way in Claude Code, Codex, git hooks and CI.",
+  "hooks": "./hooks/codex.json",
+  "skills": "./skills/",
+  "license": "MIT"
+}

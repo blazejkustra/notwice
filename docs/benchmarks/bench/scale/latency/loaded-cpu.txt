@@ -1,0 +1,24 @@
+== src 12 rules (CPU ms)
+PostToolUse Write (50-line patch)  p50   70 ms   p95   80 ms
+PreToolUse Bash (git push, 300 lines) p50  110 ms   p95  120 ms
+Stop (300 lines since start)       p50  170 ms   p95  180 ms
+== src 150 rules (CPU ms)
+PostToolUse Write (50-line patch)  p50   90 ms   p95  100 ms
+PreToolUse Bash (git push, 300 lines) p50  180 ms   p95  200 ms
+Stop (300 lines since start)       p50  240 ms   p95  260 ms
+== src 1000 rules (CPU ms)
+PostToolUse Write (50-line patch)  p50  150 ms   p95  210 ms
+PreToolUse Bash (git push, 300 lines) p50  430 ms   p95  480 ms
+Stop (300 lines since start)       p50  400 ms   p95  470 ms
+== src-patched 12 rules (CPU ms)
+PostToolUse Write (50-line patch)  p50   50 ms   p95   70 ms
+PreToolUse Bash (git push, 300 lines) p50   90 ms   p95  120 ms
+Stop (300 lines since start)       p50  120 ms   p95  170 ms
+== src-patched 150 rules (CPU ms)
+PostToolUse Write (50-line patch)  p50   70 ms   p95   90 ms
+PreToolUse Bash (git push, 300 lines) p50  160 ms   p95  180 ms
+Stop (300 lines since start)       p50  220 ms   p95  240 ms
+== src-patched 1000 rules (CPU ms)
+PostToolUse Write (50-line patch)  p50  170 ms   p95  190 ms
+PreToolUse Bash (git push, 300 lines) p50  310 ms   p95  340 ms
+Stop (300 lines since start)       p50  300 ms   p95  330 ms

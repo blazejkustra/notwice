@@ -1,0 +1,7 @@
+name: notwice
+description: Check a pull request against the project's notwice rules (diff, commit messages, PR body and size).
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: node "$GITHUB_ACTION_PATH/bin/notwice" check --ci

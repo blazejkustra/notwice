@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+import { setFlagsFromString } from 'node:v8'
+
+setFlagsFromString('--enable-experimental-regexp-engine-on-excessive-backtracks')
+const { main } = await import('../src/cli.mjs')
+process.exitCode = main(process.argv.slice(2))

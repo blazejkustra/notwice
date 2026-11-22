@@ -1,0 +1,17 @@
+{
+  "name": "notwice",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One set of rules, learned from your corrections, enforced the same way in Claude Code, Codex, git hooks and CI.",
+  "type": "module",
+  "bin": {
+    "notwice": "bin/notwice"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

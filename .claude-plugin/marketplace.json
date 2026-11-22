@@ -1,0 +1,14 @@
+{
+  "name": "notwice",
+  "description": "notwice: corrections to coding agents become proven rules that hooks, git hooks and CI enforce.",
+  "owner": {
+    "name": "Blazej Kustra"
+  },
+  "plugins": [
+    {
+      "name": "notwice",
+      "source": "./",
+      "description": "One set of rules, learned from your corrections, enforced the same way in Claude Code, Codex, git hooks and CI."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "notwice",
+  "version": "0.1.0",
+  "description": "One set of rules, learned from your corrections, enforced the same way in Claude Code, Codex, git hooks and CI.",
+  "author": {
+    "name": "Blazej Kustra"
+  },
+  "homepage": "https://github.com/blazejkustra/notwice",
+  "repository": "https://github.com/blazejkustra/notwice",
+  "license": "MIT"
+}

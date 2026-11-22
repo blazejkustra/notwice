@@ -1,0 +1,39 @@
+{
+ "candidates": 1025,
+ "passed": 1022,
+ "rejected": [
+  {
+   "id": "ts-no-non-null-on-find",
+   "problems": [
+    "the Bad example does not trigger it"
+   ]
+  },
+  {
+   "id": "dart-ignore-needs-reason",
+   "problems": [
+    "the Good example triggers it"
+   ]
+  },
+  {
+   "id": "no-shutdown",
+   "problems": [
+    "the Bad example does not trigger it"
+   ]
+  }
+ ],
+ "inertDropped": [],
+ "liveCorpusHits": {
+  "git-add-by-name": [
+   "command: git add -A && git status --short && git diff --cached --stat | tail -5",
+   "command: git add -A src test && git status --short && git diff --cached --stat && head -c 1500 src/* test/* 2>/dev/null | head -80",
+   "command: git add -A && git status --short && git diff --cached --stat && git remote -v",
+   "command: git add -A && git status --short && git diff --cached --stat",
+   "command: git add -A && git status --short && git diff --cached --stat && ls CLAUDE.md .claude 2>/dev/null"
+  ],
+  "commit-body-wrap": [],
+  "writing-no-hype-words": [],
+  "md-no-emphasis-line": [],
+  "js-number-isnan": [],
+  "no-single-letter-names": []
+ }
+}

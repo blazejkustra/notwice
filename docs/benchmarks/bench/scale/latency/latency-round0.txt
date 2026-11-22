@@ -1,0 +1,48 @@
+== 12 rules
+SessionStart                   p50  256 ms   p95  969 ms
+PostToolUse Write              p50   79 ms   p95  313 ms
+PreToolUse Write               p50  119 ms   p95  515 ms
+PreToolUse Bash (ls)           p50  210 ms   p95 2192 ms
+PreToolUse Bash (git push)     p50  289 ms   p95 1238 ms
+PostToolUse Bash (git commit)  p50  530 ms   p95 3638 ms
+PostToolUse Bash (npm test)    p50  350 ms   p95  740 ms
+PostToolUse MCP                p50  124 ms   p95  518 ms
+Stop                           p50 1272 ms   p95 4325 ms
+UserPromptSubmit               p50  286 ms   p95 1363 ms
+PreToolUse Agent               p50  155 ms   p95  784 ms
+PostToolUse Agent              p50  152 ms   p95  378 ms
+SubagentStart                  p50  138 ms   p95  247 ms
+SubagentStop                   p50  110 ms   p95  180 ms
+PreToolUse Bash (gh pr create) p50  319 ms   p95  668 ms
+== 150 rules
+SessionStart                   p50  280 ms   p95  403 ms
+PostToolUse Write              p50  134 ms   p95  185 ms
+PreToolUse Write               p50  100 ms   p95  129 ms
+PreToolUse Bash (ls)           p50  122 ms   p95  147 ms
+PreToolUse Bash (git push)     p50  267 ms   p95  337 ms
+PostToolUse Bash (git commit)  p50  198 ms   p95  261 ms
+PostToolUse Bash (npm test)    p50  111 ms   p95  128 ms
+PostToolUse MCP                p50  120 ms   p95  128 ms
+Stop                           p50  325 ms   p95  809 ms
+UserPromptSubmit               p50   67 ms   p95  103 ms
+PreToolUse Agent               p50   67 ms   p95   79 ms
+PostToolUse Agent              p50   93 ms   p95  130 ms
+SubagentStart                  p50  116 ms   p95  158 ms
+SubagentStop                   p50   89 ms   p95  131 ms
+PreToolUse Bash (gh pr create) p50  239 ms   p95  568 ms
+== 1000 rules
+SessionStart                   p50 1317 ms   p95 2707 ms
+PostToolUse Write              p50  778 ms   p95 1023 ms
+PreToolUse Write               p50  191 ms   p95  380 ms
+PreToolUse Bash (ls)           p50  189 ms   p95 1313 ms
+PreToolUse Bash (git push)     p50  332 ms   p95 1113 ms
+PostToolUse Bash (git commit)  p50  316 ms   p95  563 ms
+PostToolUse Bash (npm test)    p50  204 ms   p95  314 ms
+PostToolUse MCP                p50  164 ms   p95  196 ms
+Stop                           p50  371 ms   p95  448 ms
+UserPromptSubmit               p50   80 ms   p95  265 ms
+PreToolUse Agent               p50   87 ms   p95  396 ms
+PostToolUse Agent              p50  185 ms   p95  478 ms
+SubagentStart                  p50  247 ms   p95 1080 ms
+SubagentStop                   p50  123 ms   p95  723 ms
+PreToolUse Bash (gh pr create) p50  609 ms   p95 1665 ms

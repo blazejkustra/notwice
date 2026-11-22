@@ -1,0 +1,20 @@
+diff --git a/src/check.mjs b/src/check.mjs
+index 161cc7e..4d8f444 100644
+--- a/src/check.mjs
++++ b/src/check.mjs
+@@ -45,9 +45,14 @@ export function merge(...results) {
+ 
+ export function checkLines(rules, lines, target, inMain = false) {
+   const result = merge()
++  const ignored = new Map()
++  const skip = (rule, file) => {
++    if (!ignored.has(file)) ignored.set(file, isIgnored(file))
++    return (!rule.locked && ignored.get(file)) || (rule.paths && !rule.paths.some((re) => re.test(file)))
++  }
+   for (const rule of ofKind(rules, 'forbid', target, inMain)) {
+     for (const { file, line, text } of lines) {
+-      if (target === 'files' && !appliesTo(rule, file)) continue
++      if (target === 'files' && skip(rule, file)) continue
+       if (hits(rule, text)) record(result, rule, text, `${file}:${line}`, text)
+     }
+   }

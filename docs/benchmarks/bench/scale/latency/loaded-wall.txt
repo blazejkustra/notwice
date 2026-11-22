@@ -1,0 +1,30 @@
+== src 12 rules
+300 added lines in 6 files, 1 commit
+PostToolUse Write (50-line patch)  p50  173 ms   p95  293 ms
+PreToolUse Bash (git push, 300 lines) p50 2336 ms   p95 9895 ms
+Stop (300 lines since start)       p50 1673 ms   p95 3434 ms
+== src 150 rules
+300 added lines in 6 files, 1 commit
+PostToolUse Write (50-line patch)  p50  807 ms   p95 3310 ms
+PreToolUse Bash (git push, 300 lines) p50  527 ms   p95 2727 ms
+Stop (300 lines since start)       p50 1324 ms   p95 31023 ms
+== src 1000 rules
+300 added lines in 6 files, 1 commit
+PostToolUse Write (50-line patch)  p50 1057 ms   p95 1752 ms
+PreToolUse Bash (git push, 300 lines) p50 1719 ms   p95 15173 ms
+Stop (300 lines since start)       p50  548 ms   p95 1464 ms
+== src-patched 12 rules
+300 added lines in 6 files, 1 commit
+PostToolUse Write (50-line patch)  p50  100 ms   p95  129 ms
+PreToolUse Bash (git push, 300 lines) p50  213 ms   p95  334 ms
+Stop (300 lines since start)       p50  172 ms   p95  280 ms
+== src-patched 150 rules
+300 added lines in 6 files, 1 commit
+PostToolUse Write (50-line patch)  p50   66 ms   p95   86 ms
+PreToolUse Bash (git push, 300 lines) p50  150 ms   p95  208 ms
+Stop (300 lines since start)       p50  211 ms   p95  608 ms
+== src-patched 1000 rules
+300 added lines in 6 files, 1 commit
+PostToolUse Write (50-line patch)  p50  143 ms   p95  602 ms
+PreToolUse Bash (git push, 300 lines) p50  337 ms   p95 14173 ms
+Stop (300 lines since start)       p50  353 ms   p95 4702 ms

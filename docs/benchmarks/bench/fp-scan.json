@@ -1,0 +1,47 @@
+{
+  "repo-a": {
+    "commits": 18,
+    "addedLines": 15272,
+    "fires": {}
+  },
+  "repo-b": {
+    "commits": 50,
+    "addedLines": 6492,
+    "fires": {}
+  },
+  "repo-c": {
+    "commits": 12,
+    "addedLines": 7432,
+    "fires": {
+      "no-em-dash": {
+        "count": 2,
+        "authors": {
+          "author": 2
+        },
+        "samples": [
+          "7a2c105 author src/report.ts:43: return text.replace(URL_PATTERN, \"\").replace(/\\s*—\\s*/g, \", \").replace(/\\s+/g, \" \").trim();",
+          "7a2c105 author tests/core.test.ts:90: '```json\\n{\"top\":[{\"text\":\"Visit https://evil.example now — ok\",\"ids\":[\"i1\"]},{\"text\":\"Invented\",\"ids\":[\"i9\"]}]}\\n```',"
+        ]
+      }
+    }
+  },
+  "repo-d": {
+    "commits": 50,
+    "addedLines": 9468,
+    "fires": {
+      "no-claude-attribution": {
+        "count": 5,
+        "authors": {
+          "author": 5
+        },
+        "samples": [
+          "487b452 author message:10: Co-Authored-By: Claude <noreply@anthropic.com>",
+          "487b452 author message:14: Co-Authored-By: Claude <noreply@anthropic.com>",
+          "487b452 author message:20: Co-Authored-By: Claude <noreply@anthropic.com>",
+          "487b452 author message:29: Co-Authored-By: Claude <noreply@anthropic.com>",
+          "487b452 author message:33: Co-authored-by: Claude <noreply@anthropic.com>"
+        ]
+      }
+    }
+  }
+}

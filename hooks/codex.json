@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {"hooks": [{"type": "command", "command": "\"${PLUGIN_ROOT}/bin/notwice\" hook --agent codex", "timeout": 10}]}
+    ],
+    "UserPromptSubmit": [
+      {"hooks": [{"type": "command", "command": "\"${PLUGIN_ROOT}/bin/notwice\" hook --agent codex", "timeout": 10}]}
+    ],
+    "PreToolUse": [
+      {"matcher": "Bash|apply_patch", "hooks": [{"type": "command", "command": "\"${PLUGIN_ROOT}/bin/notwice\" hook --agent codex", "timeout": 30}]}
+    ],
+    "PostToolUse": [
+      {"matcher": "Bash|apply_patch|mcp__.*", "hooks": [{"type": "command", "command": "\"${PLUGIN_ROOT}/bin/notwice\" hook --agent codex", "timeout": 30}]}
+    ],
+    "SubagentStart": [
+      {"hooks": [{"type": "command", "command": "\"${PLUGIN_ROOT}/bin/notwice\" hook --agent codex", "timeout": 10}]}
+    ],
+    "SubagentStop": [
+      {"hooks": [{"type": "command", "command": "\"${PLUGIN_ROOT}/bin/notwice\" hook --agent codex", "timeout": 10}]}
+    ],
+    "Stop": [
+      {"hooks": [{"type": "command", "command": "\"${PLUGIN_ROOT}/bin/notwice\" hook --agent codex", "timeout": 60}]}
+    ],
+    "SessionEnd": [
+      {"hooks": [{"type": "command", "command": "\"${PLUGIN_ROOT}/bin/notwice\" hook --agent codex", "timeout": 3}]}
+    ]
+  }
+}
